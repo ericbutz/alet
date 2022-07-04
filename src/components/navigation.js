@@ -1,5 +1,7 @@
 import React from 'react';
+import {useState} from "react";
 
+/*
 class ContextMenu extends React.Component {
   constructor(props) {
     super(props)
@@ -15,21 +17,27 @@ class ContextMenu extends React.Component {
     return(
       <>
           <nav className={isMenuOpened ? 'menu' :'hideMenu'}>
-            <a href="#features">Features</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#team">Team</a>
-            <a href="#contact">Contact</a>
+            <div>
+            <a href="#features">FEATURES</a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#testimonials">TESTIMONIALS</a>
+            <a href="#team">TEAM</a>
+            <a href="#contact">CONTACT</a>
+            </div>
           </nav>
          
-        <div onClick={this.handleMenuClicked} className='contextMenu'/>
+        <div onClick={this.handleMenuClicked} className='contextMenu' />
+
+
       </>
     )
   }
 }
+*/
 
+/*
 export class Navigation extends React.Component {
   constructor(props) {
     super(props)
@@ -37,13 +45,13 @@ export class Navigation extends React.Component {
       isMenuOpened: false
     }
   }
-  
+
   onMenuClicked = () => {
     this.setState({
       isMenuOpened: !this.state.isMenuOpened
     })
   }
-  
+
   render() {
     const {isMenuOpened} = this.state
     return (
@@ -59,10 +67,32 @@ export class Navigation extends React.Component {
     )
   }
 }
-
-
-
+*/
 /*
+export const Navigation = (props) => {
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
+
+  return (
+      <nav className='hamburger'>
+        <div>
+          <a href="#features">FEATURES</a>
+          <a href="#about">ABOUT</a>
+          <a href="#services">SERVICES</a>
+          <a href="#portfolio">PORTFOLIO</a>
+          <a href="#testimonials">TESTIMONIALS</a>
+          <a href="#team">TEAM</a>
+          <a href="#contact">CONTACT</a>
+        </div>
+      </nav>
+
+
+  )
+}
+//       <div onClick={() => setIsMenuOpened(!isMenuOpened)} className='contextMenu' />
+//<nav onClick={() => setIsMenuOpened(!isMenuOpened)} className={isMenuOpened ? 'menu' :'hideMenu'}>
+
+*/
+
 export const Navigation = (props) => {
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
@@ -131,6 +161,6 @@ export const Navigation = (props) => {
     </nav>
   )
 }
-*/
 
-//export default Navigation;
+
+export default Navigation;
